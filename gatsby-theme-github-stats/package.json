@@ -7,5 +7,19 @@
     "name": "Benjamin Lannon",
     "email": "benjamin@lannonbr.com",
     "url": "https://lannonbr.com"
+  },
+  "dependencies": {
+    "gatsby-plugin-page-creator": "^2.1.2",
+    "gatsby-plugin-react-helmet": "^3.1.0",
+    "moment": "^2.24.0",
+    "react-helmet": "^5.2.1",
+    "recharts": "^1.6.2",
+    "gatsby-source-filesystem": "^2.1.2",
+    "gatsby-transformer-json": "^2.2.0"
+  },
+  "peerDependencies": {
+    "gatsby": "^2.13.3",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
   }
 }
