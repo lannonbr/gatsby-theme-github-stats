@@ -1,0 +1,11 @@
+{
+  "name": "gatsby-theme-github-stats",
+  "version": "0.0.1",
+  "main": "index.js",
+  "license": "MIT",
+  "author": {
+    "name": "Benjamin Lannon",
+    "email": "benjamin@lannonbr.com",
+    "url": "https://lannonbr.com"
+  }
+}
