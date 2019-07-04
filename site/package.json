@@ -1,7 +1,7 @@
 {
   "name": "site",
   "private": true,
-  "description": "A simplified bare-bones starter for Gatsby",
+  "description": "Sample site to test gatsby-theme-github-stats",
   "version": "0.1.0",
   "license": "MIT",
   "scripts": {
@@ -9,23 +9,15 @@
     "develop": "gatsby develop",
     "format": "prettier --write src/**/*.{js,jsx}",
     "start": "npm run develop",
-    "serve": "gatsby serve",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
+    "serve": "gatsby serve"
   },
   "dependencies": {
     "gatsby": "^2.13.3",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "gatsby-theme-github-stats": "0.0.1"
+    "gatsby-theme-github-stats": "*"
   },
   "devDependencies": {
-    "prettier": "^1.17.1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-hello-world"
-  },
-  "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "prettier": "^1.18.2"
   }
 }
