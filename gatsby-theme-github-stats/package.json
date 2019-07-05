@@ -9,13 +9,17 @@
     "url": "https://lannonbr.com"
   },
   "dependencies": {
+    "@emotion/core": "^10.0.14",
+    "@mdx-js/react": "^1.0.21",
     "gatsby-plugin-page-creator": "^2.1.2",
     "gatsby-plugin-react-helmet": "^3.1.0",
+    "gatsby-plugin-theme-ui": "^0.2.6",
+    "gatsby-source-filesystem": "^2.1.2",
+    "gatsby-transformer-json": "^2.2.0",
     "moment": "^2.24.0",
     "react-helmet": "^5.2.1",
     "recharts": "^1.6.2",
-    "gatsby-source-filesystem": "^2.1.2",
-    "gatsby-transformer-json": "^2.2.0"
+    "theme-ui": "^0.2.6"
   },
   "peerDependencies": {
     "gatsby": "^2.13.3",
