@@ -1,3 +1,7 @@
+# Unreleased
+
+- feat: add theme-ui to start theme API for customizing page style
+
 # 0.1.0 - July 03, 2019
 
 First main release

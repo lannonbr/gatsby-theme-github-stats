@@ -1,5 +1,6 @@
 import React, { Fragment } from "react"
 import { useStaticQuery, graphql } from "gatsby"
+import { Styled, Header } from "theme-ui"
 import Helmet from "react-helmet"
 import moment from "moment"
 import StatChart from "../components/StatChart"
@@ -33,15 +34,15 @@ export default () => {
   let currentNode = nodes[nodes.length - 1]
 
   return (
-    <Fragment>
+    <Styled.root>
       <Helmet title="Gatsby Stats" />
-      <header>
-        <h1>Gatsby Stats</h1>
+      <Header>
+        <Styled.h1>Gatsby Stats</Styled.h1>
         <p>
           Last Updated:{" "}
           {moment.unix(nodes[nodes.length - 1].timestamp).format("llll UTCZ")}
         </p>
-      </header>
+      </Header>
 
       <main>
         <div className="container">
@@ -131,6 +132,6 @@ export default () => {
           </section>
         </div>
       </main>
-    </Fragment>
+    </Styled.root>
   )
 }
