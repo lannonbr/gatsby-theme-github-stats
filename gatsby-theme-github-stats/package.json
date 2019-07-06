@@ -8,6 +8,15 @@
     "email": "benjamin@lannonbr.com",
     "url": "https://lannonbr.com"
   },
+  "keywords": [
+    "gatsby",
+    "gatsby-theme",
+    "gatsby-plugin"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lannonbr/gatsby-theme-github-stats"
+  },
   "dependencies": {
     "@emotion/core": "^10.0.14",
     "@mdx-js/react": "^1.0.21",
