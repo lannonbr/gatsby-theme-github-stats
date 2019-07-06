@@ -2,7 +2,8 @@
 
 - feat: add theme-ui to start theme API for customizing page style
 - fix: Creating tokens in siteMetadata for header & footers.
-- feat: abstracted header and footer to components
+- feat: abstracted header, footer, and overview section to components
+- chore: localized numerical values in overview to include commas for better readability
 
 # 0.1.0 - July 03, 2019
 

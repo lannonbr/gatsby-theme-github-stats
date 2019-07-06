@@ -5,6 +5,7 @@ A Gatsby Theme to display statistics for GitHub repos.
 ## Features
 
 - Charts with [Recharts](http://recharts.org/) library
+- Customizable styles with [Theme-UI](https://theme-ui.com/)
 
 ## Setup
 
