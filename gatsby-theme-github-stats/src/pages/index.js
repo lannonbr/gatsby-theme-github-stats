@@ -73,45 +73,27 @@ export default () => {
             </ul>
           </section>
           <section>
-            <div className="heading">
-              <h2>Open Issues</h2>
-              <p>Latest: {nodes[nodes.length - 1].openIssues}</p>
-            </div>
+            <h2>Open Issues</h2>
             <StatChart data={nodes} yKey="openIssues" color={GREEN} />
           </section>
           <section>
-            <div className="heading">
-              <h2>Closed Issues</h2>
-              <p>Latest: {nodes[nodes.length - 1].closedIssues}</p>
-            </div>
+            <h2>Closed Issues</h2>
             <StatChart data={nodes} yKey="closedIssues" color={RED} />
           </section>
           <section>
-            <div className="heading">
-              <h2>Open PRs</h2>
-              <p>Latest: {nodes[nodes.length - 1].openPRs}</p>
-            </div>
+            <h2>Open PRs</h2>
             <StatChart data={nodes} yKey="openPRs" color={GREEN} />
           </section>
           <section>
-            <div className="heading">
-              <h2>Merged PRs</h2>
-              <p>Latest: {nodes[nodes.length - 1].mergedPRs}</p>
-            </div>
+            <h2>Merged PRs</h2>
             <StatChart data={nodes} yKey="mergedPRs" color={PURPLE} />
           </section>
           <section>
-            <div className="heading">
-              <h2>Closed PRs</h2>
-              <p>Latest: {nodes[nodes.length - 1].closedPRs}</p>
-            </div>
+            <h2>Closed PRs</h2>
             <StatChart data={nodes} yKey="closedPRs" color={RED} />
           </section>
           <section>
-            <div className="heading">
-              <h2>Stars</h2>
-              <p>Latest: {nodes[nodes.length - 1].stars}</p>
-            </div>
+            <h2>Stars</h2>
             <StatChart data={nodes} yKey="stars" color={GOLD} />
           </section>
           <Footer />
