@@ -5,27 +5,27 @@ const Overview = ({ currentNode }) => (
     <h2>Overview</h2>
     <ul>
       <li>
-        {currentNode.openIssues}
+        {currentNode.openIssues.toLocaleString()}
         <p>Open Issues</p>
       </li>
       <li>
-        {currentNode.closedIssues}
+        {currentNode.closedIssues.toLocaleString()}
         <p>Closed Issues</p>
       </li>
       <li>
-        {currentNode.openPRs}
+        {currentNode.openPRs.toLocaleString()}
         <p>Open PRs</p>
       </li>
       <li>
-        {currentNode.mergedPRs}
+        {currentNode.mergedPRs.toLocaleString()}
         <p>Merged PRs</p>
       </li>
       <li>
-        {currentNode.closedPRs}
+        {currentNode.closedPRs.toLocaleString()}
         <p>Closed PRs</p>
       </li>
       <li>
-        {currentNode.stars}
+        {currentNode.stars.toLocaleString()}
         <p>Stars</p>
       </li>
     </ul>
