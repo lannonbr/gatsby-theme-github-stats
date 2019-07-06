@@ -1,7 +1,8 @@
-import colors from "./colors"
-
 export default {
-  colors,
+  colors: {
+    headerBackground: "#663399",
+    headerText: "white",
+  },
   shadows: {
     main: "0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24)",
   },
