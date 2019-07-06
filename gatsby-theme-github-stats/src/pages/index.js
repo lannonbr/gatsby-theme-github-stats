@@ -2,9 +2,11 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import { Styled } from "theme-ui"
 import moment from "moment"
+
 import StatChart from "../components/StatChart"
 import Header from "../components/Header"
 import Footer from "../components/Footer"
+import Overview from "../components/Overview"
 
 import "./index.css"
 
@@ -43,59 +45,38 @@ export default () => {
       />
       <main>
         <div className="container">
-          <section id="overview">
-            <h2>Overview</h2>
-            <ul>
-              <li>
-                {currentNode.openIssues}
-                <p>Open Issues</p>
-              </li>
-              <li>
-                {currentNode.closedIssues}
-                <p>Closed Issues</p>
-              </li>
-              <li>
-                {currentNode.openPRs}
-                <p>Open PRs</p>
-              </li>
-              <li>
-                {currentNode.mergedPRs}
-                <p>Merged PRs</p>
-              </li>
-              <li>
-                {currentNode.closedPRs}
-                <p>Closed PRs</p>
-              </li>
-              <li>
-                {currentNode.stars}
-                <p>Stars</p>
-              </li>
-            </ul>
-          </section>
-          <section>
-            <h2>Open Issues</h2>
-            <StatChart data={nodes} yKey="openIssues" color={GREEN} />
-          </section>
-          <section>
-            <h2>Closed Issues</h2>
-            <StatChart data={nodes} yKey="closedIssues" color={RED} />
-          </section>
-          <section>
-            <h2>Open PRs</h2>
-            <StatChart data={nodes} yKey="openPRs" color={GREEN} />
-          </section>
-          <section>
-            <h2>Merged PRs</h2>
-            <StatChart data={nodes} yKey="mergedPRs" color={PURPLE} />
-          </section>
-          <section>
-            <h2>Closed PRs</h2>
-            <StatChart data={nodes} yKey="closedPRs" color={RED} />
-          </section>
-          <section>
-            <h2>Stars</h2>
-            <StatChart data={nodes} yKey="stars" color={GOLD} />
-          </section>
+          <Overview currentNode={currentNode} />
+          <StatChart
+            title="Open Issues"
+            data={nodes}
+            yKey="openIssues"
+            color={GREEN}
+          />
+          <StatChart
+            title="Closed Issues"
+            data={nodes}
+            yKey="closedIssues"
+            color={RED}
+          />
+          <StatChart
+            title="Open PRs"
+            data={nodes}
+            yKey="openPRs"
+            color={GREEN}
+          />
+          <StatChart
+            title="Merged PRs"
+            data={nodes}
+            yKey="mergedPRs"
+            color={PURPLE}
+          />
+          <StatChart
+            title="Closed PRs"
+            data={nodes}
+            yKey="closedPRs"
+            color={RED}
+          />
+          <StatChart title="Stars" data={nodes} yKey="stars" color={GOLD} />
           <Footer />
         </div>
       </main>
