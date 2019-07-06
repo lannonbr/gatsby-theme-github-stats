@@ -7,7 +7,11 @@
 const path = require("path")
 
 module.exports = {
-  /* Your site config here */
+  siteMetadata: {
+    title: "Gatsby Stats",
+    source: "https://github.com/lannonbr/gatsby-github-stats",
+    repoNameWithOwner: "gatsbyjs/gatsby",
+  },
   plugins: [
     {
       resolve: `gatsby-theme-github-stats`,

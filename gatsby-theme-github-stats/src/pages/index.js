@@ -1,9 +1,10 @@
-import React, { Fragment } from "react"
+import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import { Styled, Header } from "theme-ui"
-import Helmet from "react-helmet"
+import { Styled } from "theme-ui"
 import moment from "moment"
 import StatChart from "../components/StatChart"
+import Header from "../components/Header"
+import Footer from "../components/Footer"
 
 import "./index.css"
 
@@ -35,15 +36,11 @@ export default () => {
 
   return (
     <Styled.root>
-      <Helmet title="Gatsby Stats" />
-      <Header>
-        <Styled.h1>Gatsby Stats</Styled.h1>
-        <p>
-          Last Updated:{" "}
-          {moment.unix(nodes[nodes.length - 1].timestamp).format("llll UTCZ")}
-        </p>
-      </Header>
-
+      <Header
+        lastUpdatedTime={moment
+          .unix(nodes[nodes.length - 1].timestamp)
+          .format("llll UTCZ")}
+      />
       <main>
         <div className="container">
           <section id="overview">
@@ -117,19 +114,7 @@ export default () => {
             </div>
             <StatChart data={nodes} yKey="stars" color={GOLD} />
           </section>
-          <section>
-            <p>
-              These are statistics for the{" "}
-              <a href="https://github.com/gatsbyjs/gatsby">gatsbyjs/gatsby</a>{" "}
-              GitHub repo over the last two weeks
-            </p>
-            <p>
-              Source:{" "}
-              <a href="https://github.com/lannonbr/gatsby-github-stats/">
-                https://github.com/lannonbr/gatsby-github-stats
-              </a>
-            </p>
-          </section>
+          <Footer />
         </div>
       </main>
     </Styled.root>

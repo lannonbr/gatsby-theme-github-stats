@@ -54,3 +54,13 @@ These are all of the currently available fields in the `options` field in the ga
 | Name     | Description                         | default | Required |
 | -------- | ----------------------------------- | ------- | -------- |
 | dataPath | the filepath to your data directory | N/A     | true     |
+
+## Site Metadata
+
+Some of the text around the site is customized by siteMetadata tokens.
+
+| Name              | Description                                             | example                                         |
+| ----------------- | ------------------------------------------------------- | ----------------------------------------------- |
+| title             | Title at the top left of the page and the `<title>` tag | Gatsby Stats                                    |
+| source            | url to source of the Gatsby site                        | https://github.com/lannonbr/gatsby-github-stats |
+| repoNameWithOwner | username & repo name on GitHub                          | gatsbyjs/gatsby                                 |
