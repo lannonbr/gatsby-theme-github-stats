@@ -34,7 +34,7 @@ export default () => {
   let currentNode = nodes[nodes.length - 1]
 
   return (
-    <Fragment>
+    <Styled.root>
       <Helmet title="Gatsby Stats" />
       <Header>
         <Styled.h1>Gatsby Stats</Styled.h1>
@@ -132,6 +132,6 @@ export default () => {
           </section>
         </div>
       </main>
-    </Fragment>
+    </Styled.root>
   )
 }

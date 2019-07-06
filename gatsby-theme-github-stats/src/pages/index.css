@@ -2,7 +2,6 @@ body {
   background: #f0f0f0;
   margin: 0;
   padding: 0;
-  font-family: Arial, Helvetica, sans-serif;
 }
 
 .container {
@@ -61,7 +60,7 @@ header,
 
 .heading p {
   font-size: 20px;
-  color: #888;
+  color: #666;
 }
 
 @media (max-width: 900px) {
