@@ -1,4 +1,8 @@
-# Unreleased
+# 0.3.0 - July 10, 2019
+
+- feat: added additional stats for each metric
+
+# 0.2.0 - July 06, 2019
 
 - feat: add theme-ui to start theme API for customizing page style
 - fix: Creating tokens in siteMetadata for header & footers.
