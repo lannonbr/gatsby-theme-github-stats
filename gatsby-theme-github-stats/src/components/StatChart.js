@@ -10,10 +10,22 @@ import {
   ResponsiveContainer,
 } from "recharts"
 import moment from "moment"
+import { css } from "theme-ui"
 
 const interval = 50
 
 const StatChart = ({ title, data, yKey, color }) => {
+  let datapoints = data.map(dataEntry => dataEntry[yKey])
+
+  let max = Math.max(...datapoints)
+  let min = Math.min(...datapoints)
+
+  let first = data[0]
+  let last = data[data.length - 1]
+
+  first = { timestamp: first.timestamp, [yKey]: first[yKey] }
+  last = { timestamp: last.timestamp, [yKey]: last[yKey] }
+
   return (
     <section>
       <h2>{title}</h2>
@@ -47,6 +59,32 @@ const StatChart = ({ title, data, yKey, color }) => {
           <CartesianGrid stroke="#ccc" strokeDasharray="5 5" />
         </LineChart>
       </ResponsiveContainer>
+      <div
+        css={css({
+          display: "grid",
+          gridTemplateColumns: "1fr 1fr",
+        })}
+      >
+        <div>
+          <h3>Start Value</h3>
+          <p>{first[yKey] + " " + title}</p>
+        </div>
+
+        <div>
+          <h3>End Value</h3>
+          <p>{last[yKey] + " " + title}</p>
+        </div>
+
+        <div>
+          <h3>Max Value</h3>
+          <p>{max + " " + title}</p>
+        </div>
+
+        <div>
+          <h3>Min Value</h3>
+          <p>{min + " " + title}</p>
+        </div>
+      </div>
     </section>
   )
 }
