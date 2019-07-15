@@ -37,11 +37,8 @@ const StatChart = ({ title, data, yKey, color }) => {
             type="monotone"
             dataKey={yKey}
             stroke={color}
-            dot={{
-              stroke: color,
-              strokeWidth: 1,
-              fill: color,
-            }}
+            dot={false}
+            isAnimationActive={false}
           />
           <XAxis
             dataKey="timestamp"
