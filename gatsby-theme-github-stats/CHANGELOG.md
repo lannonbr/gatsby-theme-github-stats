@@ -1,13 +1,18 @@
+# 0.3.1 - July 14, 2019
+
+- fix: Drastically lowered html node count by removing dots from graphs
+- fix: Turned off graph rendering animations
+
 # 0.3.0 - July 10, 2019
 
-- feat: added additional stats for each metric
+- feat: Added additional stats for each metric
 
 # 0.2.0 - July 06, 2019
 
-- feat: add theme-ui to start theme API for customizing page style
+- feat: Add theme-ui to start theme API for customizing page style
 - fix: Creating tokens in siteMetadata for header & footers.
-- feat: abstracted header, footer, and overview section to components
-- chore: localized numerical values in overview to include commas for better readability
+- feat: Abstracted header, footer, and overview section to components
+- chore: Localized numerical values in overview to include commas for better readability
 
 # 0.1.0 - July 03, 2019
 
