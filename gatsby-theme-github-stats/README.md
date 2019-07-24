@@ -22,7 +22,9 @@ module.exports = {
   plugins: [
     {
       resolve: `gatsby-theme-github-stats`,
-      options: {},
+      options: {
+        dataPath: path.join(__dirname, `src`, `data`),
+      },
     },
   ],
 }
@@ -52,7 +54,7 @@ Then finally run `yarn develop` and you should see the fully fleshed out site wi
 
 These are all of the currently available fields in the `options` field in the gatsby-config plugin entry for this theme:
 
-| Name     | Description                         | default | Required |
+| Name     | Description                         | Default | Required |
 | -------- | ----------------------------------- | ------- | -------- |
 | dataPath | the filepath to your data directory | N/A     | true     |
 
@@ -60,8 +62,43 @@ These are all of the currently available fields in the `options` field in the ga
 
 Some of the text around the site is customized by siteMetadata tokens.
 
-| Name              | Description                                             | example                                         |
+| Name              | Description                                             | Example                                         |
 | ----------------- | ------------------------------------------------------- | ----------------------------------------------- |
 | title             | Title at the top left of the page and the `<title>` tag | Gatsby Stats                                    |
 | source            | url to source of the Gatsby site                        | https://github.com/lannonbr/gatsby-github-stats |
 | repoNameWithOwner | username & repo name on GitHub                          | gatsbyjs/gatsby                                 |
+
+## Theme UI
+
+You can extend / override some of the styling on this page using Theme UI. you can the default theme inside the theme's directory at `src/gatsby-plugin-theme-ui/index.js`
+
+If you want to override it, create a file in your site's directory at `src/gatsby-plugin-theme-ui/index.js`.
+
+Here's an example of how to override it:
+
+```js
+// site/src/gatsby-plugin-theme-ui/index.js
+
+// import the gatsby-theme's theme.
+import Theme from "gatsby-theme-github-stats/src/gatsby-plugin-theme-ui"
+
+export default {
+  // copy over content from the default theme
+  ...Theme,
+  colors: {
+    // copy over default colors
+    ...Theme.colors,
+
+    // override headerBackground to be red
+    headerBackground: "red",
+  },
+}
+```
+
+Here are various properties you can shadow:
+
+| Field                   | Description                                  | Default                                                                                                                       |
+| ----------------------- | -------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
+| colors.headerBackground | Header background                            | "#663399"                                                                                                                     |
+| colors.headerText       | Header text color                            | "white"                                                                                                                       |
+| fonts.systemSans        | Sans-serif font that is used across the site | "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif" |
