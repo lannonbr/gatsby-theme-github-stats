@@ -1,3 +1,7 @@
+# 0.3.2 - July 24, 2019
+
+- docs: Updated readme for theme to include info on Theme UI
+
 # 0.3.1 - July 14, 2019
 
 - fix: Drastically lowered html node count by removing dots from graphs
