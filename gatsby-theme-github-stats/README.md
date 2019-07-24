@@ -2,6 +2,12 @@
 
 A Gatsby Theme to display statistics for GitHub repos.
 
+## Example Site
+
+you can see a live running example site at [https://gatsby-theme-github-stats-example.netlify.com/](https://gatsby-theme-github-stats-example.netlify.com/).
+
+This is the gatsby site in this repo at `site` deployed up to Netlify.
+
 ## Features
 
 - Charts with [Recharts](http://recharts.org/) library
