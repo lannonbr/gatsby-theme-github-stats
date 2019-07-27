@@ -1,13 +1,5 @@
-const path = require("path")
-
 module.exports = options => ({
   plugins: [
-    {
-      resolve: `gatsby-plugin-page-creator`,
-      options: {
-        path: path.join(__dirname, `src`, `pages`),
-      },
-    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {

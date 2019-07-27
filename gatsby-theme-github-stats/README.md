@@ -2,6 +2,8 @@
 
 A Gatsby Theme to display statistics for GitHub repos.
 
+![Example site for theme using gatsby as data](./theme-example.png)
+
 ## Example Site
 
 you can see a live running example site at [https://gatsby-theme-github-stats-example.netlify.com/](https://gatsby-theme-github-stats-example.netlify.com/).
@@ -25,6 +27,11 @@ and then put it in your gatsby-config file
 
 ```js
 module.exports = {
+  siteMetadata: {
+    title: '<title for page>'
+    source: '<GitHub URL for your site>'
+    repoNameWithOwner: '<github owner & repo in format of `owner/repo`>'
+  }
   plugins: [
     {
       resolve: `gatsby-theme-github-stats`,
@@ -60,19 +67,20 @@ Then finally run `yarn develop` and you should see the fully fleshed out site wi
 
 These are all of the currently available fields in the `options` field in the gatsby-config plugin entry for this theme:
 
-| Name     | Description                         | Default | Required |
-| -------- | ----------------------------------- | ------- | -------- |
-| dataPath | the filepath to your data directory | N/A     | true     |
+| Name     | Description                                                             | Default | Required |
+| -------- | ----------------------------------------------------------------------- | ------- | -------- |
+| basePath | url base path for the dashboard page to be created at (ex: `'/stats/'`) | '/'     | false    |
+| dataPath | the filepath to your data directory                                     | N/A     | true     |
 
 ## Site Metadata
 
 Some of the text around the site is customized by siteMetadata tokens.
 
-| Name              | Description                                             | Example                                         |
-| ----------------- | ------------------------------------------------------- | ----------------------------------------------- |
-| title             | Title at the top left of the page and the `<title>` tag | Gatsby Stats                                    |
-| source            | url to source of the Gatsby site                        | https://github.com/lannonbr/gatsby-github-stats |
-| repoNameWithOwner | username & repo name on GitHub                          | gatsbyjs/gatsby                                 |
+| Name              | Description                                             | Example                                         | required |
+| ----------------- | ------------------------------------------------------- | ----------------------------------------------- | -------- |
+| title             | Title at the top left of the page and the `<title>` tag | Gatsby Stats                                    | true     |
+| source            | url to source of the Gatsby site                        | https://github.com/lannonbr/gatsby-github-stats | false    |
+| repoNameWithOwner | username & repo name on GitHub                          | gatsbyjs/gatsby                                 | false    |
 
 ## Theme UI
 

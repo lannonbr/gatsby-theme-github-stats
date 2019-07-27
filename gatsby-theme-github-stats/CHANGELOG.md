@@ -1,3 +1,7 @@
+# 0.4.0 - July 27, 2019
+
+- feat: Added `basePath` theme option so the dashboard page can be created on routes other than `/` (For example `/stats`)
+
 # 0.3.2 - July 24, 2019
 
 - docs: Updated readme for theme to include info on Theme UI
