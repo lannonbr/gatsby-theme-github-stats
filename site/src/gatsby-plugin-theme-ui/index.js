@@ -4,6 +4,6 @@ export default {
   ...Theme,
   colors: {
     ...Theme.colors,
-    headerBackground: "#3498db",
+    headerBackground: "#0652DD",
   },
 }
