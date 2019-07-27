@@ -9,16 +9,23 @@ const HeaderComponent = () => {
       site {
         siteMetadata {
           title
+          repoNameWithOwner
         }
       }
     }
   `)
 
-  const { title } = data.site.siteMetadata
+  const { title, repoNameWithOwner } = data.site.siteMetadata
 
   return (
     <Header>
-      <Helmet title={title} />
+      <Helmet title={title}>
+        <html lang={`en`} />
+        <meta
+          name="description"
+          content={`Dashboard for GitHub Metrics for ${repoNameWithOwner}`}
+        />
+      </Helmet>
       <Styled.h1>{title}</Styled.h1>
       <p>
         <a

@@ -1,3 +1,7 @@
+# 0.4.1 - July 27, 2019
+
+- feat: add meta:description and lang attr to `<html>`
+
 # 0.4.0 - July 27, 2019
 
 - feat: Added `basePath` theme option so the dashboard page can be created on routes other than `/` (For example `/stats`)
