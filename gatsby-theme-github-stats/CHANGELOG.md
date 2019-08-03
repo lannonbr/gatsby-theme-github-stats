@@ -1,3 +1,7 @@
+# 0.5.1 - August 3, 2019
+
+- bugfix: Fix issue with Overview section
+
 # 0.5.0 - August 3, 2019
 
 - feat: add new fields in Overview section to see state compared to a day ago.

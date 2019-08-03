@@ -32,8 +32,8 @@ const Overview = ({ currentNode, prevDayNode }) => (
       <li>
         {currentNode.openIssues.toLocaleString()}
         <p>Open Issues</p>
-        prevDayNode &&{" "}
-        {dayDiff(currentNode.openIssues, prevDayNode.openIssues, "down")}
+        {prevDayNode &&
+          dayDiff(currentNode.openIssues, prevDayNode.openIssues, "down")}
       </li>
       <li>
         {currentNode.closedIssues.toLocaleString()}
