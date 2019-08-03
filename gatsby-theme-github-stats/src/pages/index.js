@@ -35,6 +35,7 @@ export default () => {
   let nodes = data.allDataJson.nodes.sort((a, b) => a.timestamp - b.timestamp)
 
   let currentNode = nodes[nodes.length - 1]
+  let prevDayNode = nodes[nodes.length - 25] || null // Safety net if nodes is less than 24 in size.
 
   return (
     <Styled.root>
@@ -45,7 +46,7 @@ export default () => {
       />
       <main>
         <div className="container">
-          <Overview currentNode={currentNode} />
+          <Overview currentNode={currentNode} prevDayNode={prevDayNode} />
           <StatChart
             title="Open Issues"
             data={nodes}

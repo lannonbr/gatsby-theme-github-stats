@@ -1,3 +1,7 @@
+# 0.5.0 - August 3, 2019
+
+- feat: add new fields in Overview section to see state compared to a day ago.
+
 # 0.4.1 - July 27, 2019
 
 - feat: add meta:description and lang attr to `<html>`
