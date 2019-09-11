@@ -1,3 +1,7 @@
+# 0.5.2 - September 11, 2019
+
+- chore: Increasing line thickness to improve viewability.
+
 # 0.5.1 - August 3, 2019
 
 - bugfix: Fix issue with Overview section
