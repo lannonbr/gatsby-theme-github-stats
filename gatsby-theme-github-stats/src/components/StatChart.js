@@ -37,6 +37,7 @@ const StatChart = ({ title, data, yKey, color }) => {
             type="monotone"
             dataKey={yKey}
             stroke={color}
+            strokeWidth={3}
             dot={false}
             isAnimationActive={false}
           />
