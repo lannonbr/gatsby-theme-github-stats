@@ -1,3 +1,7 @@
+# 0.5.3 - October 17, 2019
+
+- chore: updated dependencies
+
 # 0.5.2 - September 11, 2019
 
 - chore: Increasing line thickness to improve viewability.

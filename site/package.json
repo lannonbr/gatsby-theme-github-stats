@@ -13,9 +13,9 @@
     "serve": "gatsby serve"
   },
   "dependencies": {
-    "gatsby": "^2.13.25",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
+    "gatsby": "^2.16.4",
+    "react": "^16.10.2",
+    "react-dom": "^16.10.2",
     "gatsby-theme-github-stats": "*"
   },
   "devDependencies": {

@@ -1,6 +1,6 @@
 {
   "name": "gatsby-theme-github-stats",
-  "version": "0.5.2",
+  "version": "0.5.3",
   "main": "index.js",
   "license": "MIT",
   "author": {
@@ -18,22 +18,22 @@
     "url": "https://github.com/lannonbr/gatsby-theme-github-stats"
   },
   "dependencies": {
-    "@emotion/core": "^10.0.14",
-    "@emotion/styled": "^10.0.14",
-    "@mdx-js/react": "^1.0.27",
-    "gatsby-plugin-emotion": "^4.1.2",
-    "gatsby-plugin-react-helmet": "^3.1.2",
-    "gatsby-plugin-theme-ui": "^0.2.6",
-    "gatsby-source-filesystem": "^2.1.5",
-    "gatsby-transformer-json": "^2.2.2",
+    "@emotion/core": "^10.0.21",
+    "@emotion/styled": "^10.0.17",
+    "@mdx-js/react": "^1.5.1",
+    "gatsby-plugin-emotion": "^4.1.12",
+    "gatsby-plugin-react-helmet": "^3.1.13",
+    "gatsby-plugin-theme-ui": "^0.2.43",
+    "gatsby-source-filesystem": "^2.1.33",
+    "gatsby-transformer-json": "^2.2.15",
     "moment": "^2.24.0",
     "react-helmet": "^5.2.1",
-    "recharts": "^1.6.2",
-    "theme-ui": "^0.2.14"
+    "recharts": "^1.8.3",
+    "theme-ui": "^0.2.44"
   },
   "peerDependencies": {
-    "gatsby": "^2.13.25",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6"
+    "gatsby": "^2.16.4",
+    "react": "^16.10.2",
+    "react-dom": "^16.10.2"
   }
 }
