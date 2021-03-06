@@ -1,7 +1,21 @@
-import React from "react"
-import { Styled, Header } from "theme-ui"
+import * as React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Helmet from "react-helmet"
+import styled from "styled-components"
+
+const StyledHeader = styled.header`
+  background-color: #663399;
+  color: white;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  padding: 8px;
+  margin-bottom: 24px;
+`
+
+const StyledH1 = styled.h1`
+  margin: 0;
+  font-weight: 500;
+  display: inline;
+`
 
 const HeaderComponent = ({ lastUpdatedTime }) => {
   const data = useStaticQuery(graphql`
@@ -18,7 +32,7 @@ const HeaderComponent = ({ lastUpdatedTime }) => {
   const { title, repoNameWithOwner } = data.site.siteMetadata
 
   return (
-    <Header>
+    <StyledHeader>
       <Helmet title={title}>
         <html lang={`en`} />
         <meta
@@ -26,9 +40,9 @@ const HeaderComponent = ({ lastUpdatedTime }) => {
           content={`Dashboard for GitHub Metrics for ${repoNameWithOwner}`}
         />
       </Helmet>
-      <Styled.h1>{title}</Styled.h1>
+      <StyledH1>{title}</StyledH1>
       <p>Last Updated: {lastUpdatedTime}</p>
-    </Header>
+    </StyledHeader>
   )
 }
 
