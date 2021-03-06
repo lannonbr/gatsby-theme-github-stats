@@ -1,4 +1,4 @@
-module.exports = options => ({
+module.exports = (options) => ({
   plugins: [
     {
       resolve: `gatsby-source-filesystem`,
@@ -9,7 +9,6 @@ module.exports = options => ({
     },
     `gatsby-plugin-react-helmet`,
     `gatsby-transformer-json`,
-    `gatsby-plugin-theme-ui`,
-    `gatsby-plugin-emotion`,
+    `gatsby-plugin-styled-components`,
   ],
 })

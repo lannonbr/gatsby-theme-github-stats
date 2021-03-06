@@ -1,4 +1,4 @@
-import React from "react"
+import * as React from "react"
 import {
   LineChart,
   Line,
@@ -10,12 +10,11 @@ import {
   ResponsiveContainer,
 } from "recharts"
 import moment from "moment"
-import { css } from "theme-ui"
 
 const interval = 50
 
 const StatChart = ({ title, data, yKey, color }) => {
-  let datapoints = data.map(dataEntry => dataEntry[yKey])
+  let datapoints = data.map((dataEntry) => dataEntry[yKey])
 
   let max = Math.max(...datapoints)
   let min = Math.min(...datapoints)
@@ -31,7 +30,9 @@ const StatChart = ({ title, data, yKey, color }) => {
       <h2>{title}</h2>
       <ResponsiveContainer width="100%" height={400}>
         <LineChart data={data} margin={{ top: 15 }}>
-          <Tooltip labelFormatter={time => moment.unix(time).format("llll")} />
+          <Tooltip
+            labelFormatter={(time) => moment.unix(time).format("llll")}
+          />
           <Legend />
           <Line
             type="monotone"
@@ -43,25 +44,25 @@ const StatChart = ({ title, data, yKey, color }) => {
           />
           <XAxis
             dataKey="timestamp"
-            tickFormatter={time => moment.unix(time).format("YYYY-MM-DD")}
+            tickFormatter={(time) => moment.unix(time).format("YYYY-MM-DD")}
             minTickGap={20}
             padding={{ left: 10, right: 10 }}
           />
           <YAxis
             interval={0}
             domain={[
-              dataMin => Math.floor(dataMin / interval) * interval,
-              dataMax => Math.ceil(dataMax / interval) * interval,
+              (dataMin) => Math.floor(dataMin / interval) * interval,
+              (dataMax) => Math.ceil(dataMax / interval) * interval,
             ]}
           />
           <CartesianGrid stroke="#ccc" strokeDasharray="5 5" />
         </LineChart>
       </ResponsiveContainer>
       <div
-        css={css({
+        style={{
           display: "grid",
           gridTemplateColumns: "1fr 1fr",
-        })}
+        }}
       >
         <div>
           <h3>Start Value</h3>

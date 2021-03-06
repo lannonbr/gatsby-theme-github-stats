@@ -13,7 +13,6 @@ This is the gatsby site in this repo at `site` deployed up to Netlify.
 ## Features
 
 - Charts with [Recharts](http://recharts.org/) library
-- Customizable styles with [Theme-UI](https://theme-ui.com/)
 
 ## Setup
 
@@ -81,38 +80,3 @@ Some of the text around the site is customized by siteMetadata tokens.
 | title             | Title at the top left of the page and the `<title>` tag | Gatsby Stats                                    | true     |
 | source            | url to source of the Gatsby site                        | https://github.com/lannonbr/gatsby-github-stats | false    |
 | repoNameWithOwner | username & repo name on GitHub                          | gatsbyjs/gatsby                                 | false    |
-
-## Theme UI
-
-You can extend / override some of the styling on this page using Theme UI. you can the default theme inside the theme's directory at `src/gatsby-plugin-theme-ui/index.js`
-
-If you want to override it, create a file in your site's directory at `src/gatsby-plugin-theme-ui/index.js`.
-
-Here's an example of how to override it:
-
-```js
-// site/src/gatsby-plugin-theme-ui/index.js
-
-// import the gatsby-theme's theme.
-import Theme from "gatsby-theme-github-stats/src/gatsby-plugin-theme-ui"
-
-export default {
-  // copy over content from the default theme
-  ...Theme,
-  colors: {
-    // copy over default colors
-    ...Theme.colors,
-
-    // override headerBackground to be red
-    headerBackground: "red",
-  },
-}
-```
-
-Here are various properties you can shadow:
-
-| Field                   | Description                                  | Default                                                                                                                       |
-| ----------------------- | -------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
-| colors.headerBackground | Header background                            | "#663399"                                                                                                                     |
-| colors.headerText       | Header text color                            | "white"                                                                                                                       |
-| fonts.systemSans        | Sans-serif font that is used across the site | "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif" |

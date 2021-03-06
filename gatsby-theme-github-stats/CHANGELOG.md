@@ -1,3 +1,8 @@
+# 1.0.0 - March 6, 2021
+
+- breaking: Update to Gatsby 3.0
+- breaking: Removed Theme-UI & migrated back to Styled-Components.
+
 # 0.5.3 - October 17, 2019
 
 - chore: updated dependencies

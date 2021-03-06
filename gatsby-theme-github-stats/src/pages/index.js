@@ -1,6 +1,5 @@
-import React from "react"
+import * as React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import { Styled } from "theme-ui"
 import moment from "moment"
 
 import StatChart from "../components/StatChart"
@@ -38,7 +37,7 @@ export default () => {
   let prevDayNode = nodes[nodes.length - 25] || null // Safety net if nodes is less than 24 in size.
 
   return (
-    <Styled.root>
+    <React.Fragment>
       <Header
         lastUpdatedTime={moment
           .unix(nodes[nodes.length - 1].timestamp)
@@ -81,6 +80,6 @@ export default () => {
           <Footer />
         </div>
       </main>
-    </Styled.root>
+    </React.Fragment>
   )
 }
